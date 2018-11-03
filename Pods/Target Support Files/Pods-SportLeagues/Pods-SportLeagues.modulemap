@@ -1,0 +1,6 @@
+framework module Pods_SportLeagues {
+  umbrella header "Pods-SportLeagues-umbrella.h"
+
+  export *
+  module * { export * }
+}
