@@ -14,6 +14,8 @@
 		91389150218DFB170018D6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9138914E218DFB170018D6ED /* LaunchScreen.storyboard */; };
 		9138915B218DFB170018D6ED /* SportLeaguesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138915A218DFB170018D6ED /* SportLeaguesTests.swift */; };
 		91389166218DFB170018D6ED /* SportLeaguesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389165218DFB170018D6ED /* SportLeaguesUITests.swift */; };
+		91389175218E06140018D6ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389174218E06140018D6ED /* Constants.swift */; };
+		91389179218E092B0018D6ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9138917B218E092B0018D6ED /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		91389161218DFB170018D6ED /* SportLeaguesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportLeaguesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91389165218DFB170018D6ED /* SportLeaguesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLeaguesUITests.swift; sourceTree = "<group>"; };
 		91389167218DFB170018D6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91389174218E06140018D6ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9138917A218E092B0018D6ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +101,10 @@
 		91389144218DFB140018D6ED /* SportLeagues */ = {
 			isa = PBXGroup;
 			children = (
+				91389176218E07CF0018D6ED /* Resources */,
 				91389145218DFB140018D6ED /* AppDelegate.swift */,
 				91389147218DFB140018D6ED /* ViewController.swift */,
 				91389149218DFB140018D6ED /* Main.storyboard */,
-				9138914C218DFB170018D6ED /* Assets.xcassets */,
 				9138914E218DFB170018D6ED /* LaunchScreen.storyboard */,
 				91389151218DFB170018D6ED /* Info.plist */,
 			);
@@ -123,6 +127,16 @@
 				91389167218DFB170018D6ED /* Info.plist */,
 			);
 			path = SportLeaguesUITests;
+			sourceTree = "<group>";
+		};
+		91389176218E07CF0018D6ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9138917B218E092B0018D6ED /* Localizable.strings */,
+				9138914C218DFB170018D6ED /* Assets.xcassets */,
+				91389174218E06140018D6ED /* Constants.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91389150218DFB170018D6ED /* LaunchScreen.storyboard in Resources */,
+				91389179218E092B0018D6ED /* Localizable.strings in Resources */,
 				9138914D218DFB170018D6ED /* Assets.xcassets in Resources */,
 				9138914B218DFB140018D6ED /* Main.storyboard in Resources */,
 			);
@@ -258,6 +273,7 @@
 			files = (
 				91389148218DFB140018D6ED /* ViewController.swift in Sources */,
 				91389146218DFB140018D6ED /* AppDelegate.swift in Sources */,
+				91389175218E06140018D6ED /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +323,14 @@
 				9138914F218DFB170018D6ED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9138917B218E092B0018D6ED /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9138917A218E092B0018D6ED /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -431,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87KE32T5A2;
 				INFOPLIST_FILE = SportLeagues/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87KE32T5A2;
 				INFOPLIST_FILE = SportLeagues/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
