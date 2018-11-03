@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4jb-lz-500">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Teams View Controller-->
+        <scene sceneID="SVa-hc-xet">
+            <objects>
+                <viewController id="4jb-lz-500" customClass="TeamsViewController" customModule="SportLeagues" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZU-Lk-ita">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WhG-Pb-C2B">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WhG-Pb-C2B" firstAttribute="leading" secondItem="LGc-W0-Bwg" secondAttribute="leading" id="JSB-ad-Ygn"/>
+                            <constraint firstItem="WhG-Pb-C2B" firstAttribute="top" secondItem="LGc-W0-Bwg" secondAttribute="top" id="f9n-p6-NRq"/>
+                            <constraint firstItem="LGc-W0-Bwg" firstAttribute="trailing" secondItem="WhG-Pb-C2B" secondAttribute="trailing" id="t31-q4-V6C"/>
+                            <constraint firstItem="LGc-W0-Bwg" firstAttribute="bottom" secondItem="WhG-Pb-C2B" secondAttribute="bottom" id="x3n-8g-bqQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LGc-W0-Bwg"/>
+                    </view>
+                    <connections>
+                        <outlet property="teamsTableView" destination="WhG-Pb-C2B" id="eJD-bC-3wq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7d-Cm-P7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="-190"/>
+        </scene>
+    </scenes>
+</document>

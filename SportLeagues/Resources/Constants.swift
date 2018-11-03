@@ -23,4 +23,12 @@ struct Constants {
         
     }
     
+    struct Cells {
+        struct TeamTableViewCell {
+            static let nibName = "TeamTableviewCell"
+            static let identifier = "TeamCell"
+        }
+    
+    }
+    
 }

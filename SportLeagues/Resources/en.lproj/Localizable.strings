@@ -6,5 +6,6 @@
   Copyright © 2018 Edison Mejia Estrada. All rights reserved.
 */
 
+"message.loadingteams" = "Loading teams..";
 "message.welcome" = "Welcome to Sport Leagues";
 "message.general.error" = "An error has ocurred, please try again later.";

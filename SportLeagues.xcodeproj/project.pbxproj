@@ -11,7 +11,7 @@
 		4D3A052D289CFEF896AEBC56 /* Pods_SportLeaguesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B35F358412646D8DAE2865 /* Pods_SportLeaguesTests.framework */; };
 		581DEA7F114186A1521D8B1C /* Pods_SportLeaguesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10ED352953FA48BE663EFC1 /* Pods_SportLeaguesUITests.framework */; };
 		91389146218DFB140018D6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389145218DFB140018D6ED /* AppDelegate.swift */; };
-		91389148218DFB140018D6ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389147218DFB140018D6ED /* ViewController.swift */; };
+		91389148218DFB140018D6ED /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389147218DFB140018D6ED /* TeamsViewController.swift */; };
 		9138914B218DFB140018D6ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91389149218DFB140018D6ED /* Main.storyboard */; };
 		9138914D218DFB170018D6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9138914C218DFB170018D6ED /* Assets.xcassets */; };
 		91389150218DFB170018D6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9138914E218DFB170018D6ED /* LaunchScreen.storyboard */; };
@@ -19,6 +19,22 @@
 		91389166218DFB170018D6ED /* SportLeaguesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389165218DFB170018D6ED /* SportLeaguesUITests.swift */; };
 		91389175218E06140018D6ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389174218E06140018D6ED /* Constants.swift */; };
 		91389179218E092B0018D6ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9138917B218E092B0018D6ED /* Localizable.strings */; };
+		91389187218E17D10018D6ED /* Teams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91389186218E17D10018D6ED /* Teams.storyboard */; };
+		9138918D218E1BFE0018D6ED /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9138918C218E1BFD0018D6ED /* TeamTableViewCell.xib */; };
+		9138918F218E4A7A0018D6ED /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138918E218E4A7A0018D6ED /* TeamTableViewCell.swift */; };
+		91389192218E4C500018D6ED /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389191218E4C500018D6ED /* Team.swift */; };
+		91389194218E4C590018D6ED /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389193218E4C590018D6ED /* League.swift */; };
+		91389197218E50030018D6ED /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389196218E50030018D6ED /* BaseRepository.swift */; };
+		91389199218E50880018D6ED /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91389198218E50880018D6ED /* Alamofire.framework */; };
+		9138919B218E50880018D6ED /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9138919A218E50880018D6ED /* AlamofireImage.framework */; };
+		9138919E218E516E0018D6ED /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138919D218E516E0018D6ED /* Encodable.swift */; };
+		913891A0218E51A70018D6ED /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138919F218E51A70018D6ED /* DataError.swift */; };
+		913891A2218E52370018D6ED /* TeamsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913891A1218E52370018D6ED /* TeamsPresenter.swift */; };
+		913891A4218E52D70018D6ED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913891A3218E52D70018D6ED /* BaseViewController.swift */; };
+		913891A7218E55A30018D6ED /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913891A6218E55A30018D6ED /* LoadingView.swift */; };
+		913891A9218E56070018D6ED /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913891A8218E56070018D6ED /* LoadingView.xib */; };
+		913891AB218E58EC0018D6ED /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913891AA218E58EC0018D6ED /* UIColorExtension.swift */; };
+		913891AD218E5F7D0018D6ED /* TeamsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913891AC218E5F7D0018D6ED /* TeamsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +60,7 @@
 		690868208043B0424DC54EFF /* Pods-SportLeaguesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportLeaguesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportLeaguesUITests/Pods-SportLeaguesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		91389142218DFB140018D6ED /* SportLeagues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportLeagues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91389145218DFB140018D6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91389147218DFB140018D6ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91389147218DFB140018D6ED /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		9138914A218DFB140018D6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9138914C218DFB170018D6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9138914F218DFB170018D6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +73,22 @@
 		91389167218DFB170018D6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91389174218E06140018D6ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9138917A218E092B0018D6ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		91389186218E17D10018D6ED /* Teams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teams.storyboard; sourceTree = "<group>"; };
+		9138918C218E1BFD0018D6ED /* TeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamTableViewCell.xib; sourceTree = "<group>"; };
+		9138918E218E4A7A0018D6ED /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		91389191218E4C500018D6ED /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		91389193218E4C590018D6ED /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		91389196218E50030018D6ED /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		91389198218E50880018D6ED /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9138919A218E50880018D6ED /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9138919D218E516E0018D6ED /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		9138919F218E51A70018D6ED /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		913891A1218E52370018D6ED /* TeamsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPresenter.swift; sourceTree = "<group>"; };
+		913891A3218E52D70018D6ED /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		913891A6218E55A30018D6ED /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		913891A8218E56070018D6ED /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		913891AA218E58EC0018D6ED /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		913891AC218E5F7D0018D6ED /* TeamsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsRepository.swift; sourceTree = "<group>"; };
 		94DA145855299D43FD6CACC2 /* Pods-SportLeagues.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportLeagues.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportLeagues/Pods-SportLeagues.release.xcconfig"; sourceTree = "<group>"; };
 		B22B6AC37790507960EB61C7 /* Pods-SportLeaguesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportLeaguesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportLeaguesTests/Pods-SportLeaguesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F008D91982E8EAADA416142A /* Pods_SportLeagues.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportLeagues.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91389199218E50880018D6ED /* Alamofire.framework in Frameworks */,
+				9138919B218E50880018D6ED /* AlamofireImage.framework in Frameworks */,
 				22539A5B9C8C50017693CE08 /* Pods_SportLeagues.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +130,8 @@
 		2C59AB30850695CE3474C35A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91389198218E50880018D6ED /* Alamofire.framework */,
+				9138919A218E50880018D6ED /* AlamofireImage.framework */,
 				F008D91982E8EAADA416142A /* Pods_SportLeagues.framework */,
 				F0B35F358412646D8DAE2865 /* Pods_SportLeaguesTests.framework */,
 				F10ED352953FA48BE663EFC1 /* Pods_SportLeaguesUITests.framework */,
@@ -128,9 +164,13 @@
 		91389144218DFB140018D6ED /* SportLeagues */ = {
 			isa = PBXGroup;
 			children = (
+				91389195218E4FF40018D6ED /* Base */,
+				91389190218E4C450018D6ED /* Models */,
+				9138918A218E17FF0018D6ED /* Splash */,
+				9138917D218E14E40018D6ED /* Teams */,
+				9138917C218E14DB0018D6ED /* Leagues */,
 				91389176218E07CF0018D6ED /* Resources */,
 				91389145218DFB140018D6ED /* AppDelegate.swift */,
-				91389147218DFB140018D6ED /* ViewController.swift */,
 				91389149218DFB140018D6ED /* Main.storyboard */,
 				9138914E218DFB170018D6ED /* LaunchScreen.storyboard */,
 				91389151218DFB170018D6ED /* Info.plist */,
@@ -159,11 +199,133 @@
 		91389176218E07CF0018D6ED /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				913891A5218E55940018D6ED /* Views */,
+				9138919C218E51620018D6ED /* Extensions */,
 				9138917B218E092B0018D6ED /* Localizable.strings */,
 				9138914C218DFB170018D6ED /* Assets.xcassets */,
 				91389174218E06140018D6ED /* Constants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9138917C218E14DB0018D6ED /* Leagues */ = {
+			isa = PBXGroup;
+			children = (
+				91389183218E151B0018D6ED /* Views */,
+				91389182218E15160018D6ED /* Presenter */,
+				91389181218E150F0018D6ED /* Repository */,
+			);
+			path = Leagues;
+			sourceTree = "<group>";
+		};
+		9138917D218E14E40018D6ED /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				91389180218E150B0018D6ED /* Views */,
+				9138917F218E14F30018D6ED /* Presenter */,
+				9138917E218E14EC0018D6ED /* Repository */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		9138917E218E14EC0018D6ED /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				913891AC218E5F7D0018D6ED /* TeamsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9138917F218E14F30018D6ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				913891A1218E52370018D6ED /* TeamsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		91389180218E150B0018D6ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9138918B218E18B40018D6ED /* Cells */,
+				91389147218DFB140018D6ED /* TeamsViewController.swift */,
+				91389186218E17D10018D6ED /* Teams.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		91389181218E150F0018D6ED /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		91389182218E15160018D6ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		91389183218E151B0018D6ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9138918A218E17FF0018D6ED /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		9138918B218E18B40018D6ED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9138918C218E1BFD0018D6ED /* TeamTableViewCell.xib */,
+				9138918E218E4A7A0018D6ED /* TeamTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		91389190218E4C450018D6ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91389191218E4C500018D6ED /* Team.swift */,
+				91389193218E4C590018D6ED /* League.swift */,
+				9138919F218E51A70018D6ED /* DataError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		91389195218E4FF40018D6ED /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				91389196218E50030018D6ED /* BaseRepository.swift */,
+				913891A3218E52D70018D6ED /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9138919C218E51620018D6ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9138919D218E516E0018D6ED /* Encodable.swift */,
+				913891AA218E58EC0018D6ED /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		913891A5218E55940018D6ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				913891A8218E56070018D6ED /* LoadingView.xib */,
+				913891A6218E55A30018D6ED /* LoadingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D89AB33B4E51ACAE16FE11D9 /* Pods */ = {
@@ -291,6 +453,9 @@
 				91389179218E092B0018D6ED /* Localizable.strings in Resources */,
 				9138914D218DFB170018D6ED /* Assets.xcassets in Resources */,
 				9138914B218DFB140018D6ED /* Main.storyboard in Resources */,
+				913891A9218E56070018D6ED /* LoadingView.xib in Resources */,
+				9138918D218E1BFE0018D6ED /* TeamTableViewCell.xib in Resources */,
+				91389187218E17D10018D6ED /* Teams.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,15 +481,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SportLeaguesTests-checkManifestLockResult.txt",
 			);
@@ -338,16 +499,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SportLeagues/Pods-SportLeagues-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
@@ -362,15 +519,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SportLeagues-checkManifestLockResult.txt",
 			);
@@ -384,15 +537,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SportLeaguesUITests-checkManifestLockResult.txt",
 			);
@@ -408,9 +557,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91389148218DFB140018D6ED /* ViewController.swift in Sources */,
+				9138918F218E4A7A0018D6ED /* TeamTableViewCell.swift in Sources */,
+				91389197218E50030018D6ED /* BaseRepository.swift in Sources */,
+				913891AD218E5F7D0018D6ED /* TeamsRepository.swift in Sources */,
+				913891A4218E52D70018D6ED /* BaseViewController.swift in Sources */,
+				91389148218DFB140018D6ED /* TeamsViewController.swift in Sources */,
 				91389146218DFB140018D6ED /* AppDelegate.swift in Sources */,
+				913891A7218E55A30018D6ED /* LoadingView.swift in Sources */,
+				913891AB218E58EC0018D6ED /* UIColorExtension.swift in Sources */,
+				91389192218E4C500018D6ED /* Team.swift in Sources */,
+				91389194218E4C590018D6ED /* League.swift in Sources */,
+				913891A0218E51A70018D6ED /* DataError.swift in Sources */,
 				91389175218E06140018D6ED /* Constants.swift in Sources */,
+				9138919E218E516E0018D6ED /* Encodable.swift in Sources */,
+				913891A2218E52370018D6ED /* TeamsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

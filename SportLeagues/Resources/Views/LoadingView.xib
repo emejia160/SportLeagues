@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingView" customModule="El_Tiempo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5J-jt-tsz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xcr-0X-FNk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK2-Sb-eOg">
+                                <rect key="frame" x="126.5" y="248" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CK2-Sb-eOg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xcr-0X-FNk" secondAttribute="leading" constant="8" id="DVd-DU-5Rn"/>
+                            <constraint firstItem="CK2-Sb-eOg" firstAttribute="centerX" secondItem="Xcr-0X-FNk" secondAttribute="centerX" id="JFS-Ah-Eji"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CK2-Sb-eOg" secondAttribute="trailing" constant="8" id="OtZ-aW-YRA"/>
+                        </constraints>
+                    </view>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_spinner_white" translatesAutoresizingMaskIntoConstraints="NO" id="clT-zb-J0f">
+                    <rect key="frame" x="128" y="168" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="clT-zb-J0f" secondAttribute="height" multiplier="1:1" id="pcV-fc-lXa"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="clT-zb-J0f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DAU-rK-faY"/>
+                <constraint firstItem="r5J-jt-tsz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="IEZ-qb-ai2"/>
+                <constraint firstItem="r5J-jt-tsz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Og0-1G-LXE"/>
+                <constraint firstItem="CK2-Sb-eOg" firstAttribute="top" secondItem="clT-zb-J0f" secondAttribute="bottom" constant="16" id="WAT-JZ-sSs"/>
+                <constraint firstItem="clT-zb-J0f" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="XXT-xu-PIa"/>
+                <constraint firstItem="r5J-jt-tsz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fk2-3d-DHx"/>
+                <constraint firstAttribute="bottom" secondItem="r5J-jt-tsz" secondAttribute="bottom" id="pcq-1N-rd3"/>
+                <constraint firstAttribute="centerY" secondItem="clT-zb-J0f" secondAttribute="bottom" constant="8" id="wDu-10-nKA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="blurView" destination="r5J-jt-tsz" id="id7-FJ-mXl"/>
+                <outlet property="imageView" destination="clT-zb-J0f" id="zJQ-fH-b97"/>
+                <outlet property="titleLabel" destination="CK2-Sb-eOg" id="UxL-hy-97c"/>
+            </connections>
+            <point key="canvasLocation" x="-172.5" y="18"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_spinner_white" width="60" height="60"/>
+    </resources>
+</document>
