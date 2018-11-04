@@ -28,29 +28,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lba-h4-xTR" userLabel="TeamViewContainer">
-                        <rect key="frame" x="40" y="20" width="479" height="167.5"/>
+                        <rect key="frame" x="10" y="10" width="539" height="187.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUQ-l4-E3c">
-                                <rect key="frame" x="0.0" y="0.0" width="479" height="167.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="539" height="187.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-iy-E3L">
-                                        <rect key="frame" x="20" y="9" width="150" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="Uae-rM-0nA"/>
-                                            <constraint firstAttribute="height" constant="150" id="mrD-Oq-2uF"/>
-                                        </constraints>
-                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-gZ-sKq">
-                                        <rect key="frame" x="190" y="0.0" width="289" height="167.5"/>
+                                        <rect key="frame" x="160" y="0.0" width="379" height="187.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arsenal futbol club" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7j-c8-jcl">
-                                                <rect key="frame" x="0.0" y="33" width="289" height="33"/>
+                                                <rect key="frame" x="0.0" y="33" width="379" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Estadio del arsenal" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTg-wR-1OT">
-                                                <rect key="frame" x="0.0" y="89" width="289" height="25"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="379" height="21"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="18"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -66,6 +59,13 @@
                                             <constraint firstItem="l7j-c8-jcl" firstAttribute="leading" secondItem="0gs-gZ-sKq" secondAttribute="leading" id="ixH-LY-f1f"/>
                                         </constraints>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wEy-iy-E3L">
+                                        <rect key="frame" x="20" y="33" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Uae-rM-0nA"/>
+                                            <constraint firstAttribute="height" constant="120" id="mrD-Oq-2uF"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -87,7 +87,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                 <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,18 +112,18 @@
                 </subviews>
                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Lba-h4-xTR" secondAttribute="bottom" constant="20" id="70R-Hu-GNW"/>
-                    <constraint firstAttribute="trailing" secondItem="Lba-h4-xTR" secondAttribute="trailing" constant="40" id="ft0-W0-LSq"/>
-                    <constraint firstItem="Lba-h4-xTR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="qPC-BF-BQm"/>
-                    <constraint firstItem="Lba-h4-xTR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="sle-3Q-wx8"/>
+                    <constraint firstAttribute="bottom" secondItem="Lba-h4-xTR" secondAttribute="bottom" constant="10" id="70R-Hu-GNW"/>
+                    <constraint firstAttribute="trailing" secondItem="Lba-h4-xTR" secondAttribute="trailing" constant="10" id="ft0-W0-LSq"/>
+                    <constraint firstItem="Lba-h4-xTR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qPC-BF-BQm"/>
+                    <constraint firstItem="Lba-h4-xTR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="sle-3Q-wx8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="newContainer" destination="Lba-h4-xTR" id="T7M-GQ-xJB"/>
                 <outlet property="teamBadge" destination="wEy-iy-E3L" id="Qwz-d1-wM5"/>
                 <outlet property="teamNameLabel" destination="l7j-c8-jcl" id="6UB-Ow-NYa"/>
                 <outlet property="teamStadiumLabel" destination="fTg-wR-1OT" id="uda-XZ-cjH"/>
+                <outlet property="teamViewContainer" destination="Lba-h4-xTR" id="d1j-z2-ajM"/>
             </connections>
             <point key="canvasLocation" x="55.5" y="153"/>
         </tableViewCell>

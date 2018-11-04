@@ -11,6 +11,7 @@ import UIKit
 class TeamsViewController: BaseViewController {
 
     var teams : [Team] = []
+    private var teamSelected : Team?
     @IBOutlet weak var teamsTableView: UITableView!
     var presenter: TeamsPresenter?
     
@@ -25,7 +26,14 @@ class TeamsViewController: BaseViewController {
     func configureTableView() {
         teamsTableView.delegate = self
         teamsTableView.dataSource = self
-        teamsTableView.register(UINib(nibName: Constants.Cells.TeamTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: Constants.Cells.TeamTableViewCell.identifier)
+        teamsTableView.register(UINib(nibName: Constants.Cells.TeamTableViewCell.nibName, bundle: Bundle.main), forCellReuseIdentifier: Constants.Cells.TeamTableViewCell.identifier)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            let vlc = segue.destination as! TeamDetailViewController
+            vlc.team = teamSelected
+        }
     }
 
 }
@@ -53,4 +61,11 @@ extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setUpData(team: teams[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.teamSelected = self.teams[indexPath.row]
+        performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+    
+    
 }

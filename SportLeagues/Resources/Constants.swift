@@ -25,8 +25,13 @@ struct Constants {
     
     struct Cells {
         struct TeamTableViewCell {
-            static let nibName = "TeamTableviewCell"
+            static let nibName = "TeamTableViewCell"
             static let identifier = "TeamCell"
+        }
+        
+        struct TeamEventCollectionViewCell {
+            static let nibName = "TeamEventCollectionViewCell"
+            static let identifier = "TeamEventCell"
         }
     
     }

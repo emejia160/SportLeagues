@@ -97,12 +97,12 @@ class BaseRepository {
     
     static func parseData<T: Decodable>(retrievedData: Any?) throws -> T {
         if let json = retrievedData as? [String : AnyObject] {
-            if let responseData = json["data"] as? [String:Any] {
+            if let responseData = json["teams"] as? [String:Any] {
                 if let data: T = T.toModel(data: responseData) {
                     return data
                 }
             }
-            else if let responseData = json["data"] as? [[String:Any]] {
+            else if let responseData = json["teams"] as? [[String:Any]] {
                 if let data: T = T.toModel(data: responseData) {
                     return data
                 }

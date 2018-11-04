@@ -9,3 +9,4 @@
 "message.loadingteams" = "Loading teams..";
 "message.welcome" = "Welcome to Sport Leagues";
 "message.general.error" = "An error has ocurred, please try again later.";
+"label.foundation.year" = "Foundation year: %@";

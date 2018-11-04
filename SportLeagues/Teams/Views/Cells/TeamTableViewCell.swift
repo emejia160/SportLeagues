@@ -11,12 +11,14 @@ import AlamofireImage
 
 class TeamTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var teamViewContainer: UIView!
     @IBOutlet weak var teamBadge: UIImageView!
     @IBOutlet weak var teamNameLabel: UILabel!
     @IBOutlet weak var teamStadiumLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        teamViewContainer.layer.masksToBounds = false
     }
     
     func setUpData(team: Team){
