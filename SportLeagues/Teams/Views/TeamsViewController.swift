@@ -8,22 +8,71 @@
 
 import UIKit
 
+struct League {
+    var leagueId : String
+    var leagueName : String
+}
+
 class TeamsViewController: BaseViewController {
 
+    @IBOutlet weak var leagueTextField: UITextField!
+    var leaguesPickerView = UIPickerView()
     var teams : [Team] = []
-    private var teamSelected : Team?
+    var teamSelected : Team?
     @IBOutlet weak var teamsTableView: UITableView!
     var presenter: TeamsPresenter?
+    private var leaguesArray : [League] = []
+    var leagueSelected: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-        showProgress(message: NSLocalizedString("message.loadingteams", comment: ""), style: .light, presentationContext: .overCurrentContext)
+        configureLeagues()
+        configurePickerView()
         self.presenter = TeamsPresenter(delegate: self)
-        self.presenter?.loadTeams()
+      
+        
+        loadTeams(leagueId: leaguesArray[2].leagueId)
+        
     }
     
-    func configureTableView() {
+    private func configurePickerView() {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(TeamsViewController.donePicker))
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        
+        self.leaguesPickerView.delegate = self
+        self.leaguesPickerView.dataSource = self
+        self.leagueTextField.inputView = self.leaguesPickerView
+         leagueTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc private func donePicker() {
+        leagueTextField.resignFirstResponder()
+        loadTeams(leagueId: self.leagueSelected)
+    }
+    
+    private func loadTeams(leagueId: String) {
+         showProgress(message: NSLocalizedString("message.loadingteams", comment: ""), style: .light, presentationContext: .overCurrentContext)
+        self.presenter?.loadTeams(leagueId: leagueId)
+    }
+    
+    private func configureLeagues() {
+        
+        leaguesArray.append(League(leagueId: "4335", leagueName: "Spanish La Liga"))
+        leaguesArray.append(League(leagueId: "4328", leagueName: "English Premier League"))
+        leaguesArray.append(League(leagueId: "4332", leagueName: "Italian Serie A"))
+    }
+    
+    private func configureTableView() {
         teamsTableView.delegate = self
         teamsTableView.dataSource = self
         teamsTableView.register(UINib(nibName: Constants.Cells.TeamTableViewCell.nibName, bundle: Bundle.main), forCellReuseIdentifier: Constants.Cells.TeamTableViewCell.identifier)
@@ -69,4 +118,32 @@ extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+}
+
+extension TeamsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return self.leaguesArray.count
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return leaguesArray[row].leagueName
+        
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        self.leagueSelected = leaguesArray[row].leagueId
+        self.leagueTextField.text = leaguesArray[row].leagueName
+        
+    }
+       
+        
 }

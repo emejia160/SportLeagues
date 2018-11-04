@@ -27,14 +27,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WhG-Pb-C2B">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="139" width="375" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a league:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-xg-esm">
+                                <rect key="frame" x="20" y="92" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WhG-Pb-C2B" firstAttribute="leading" secondItem="LGc-W0-Bwg" secondAttribute="leading" id="JSB-ad-Ygn"/>
-                            <constraint firstItem="WhG-Pb-C2B" firstAttribute="top" secondItem="LGc-W0-Bwg" secondAttribute="top" id="f9n-p6-NRq"/>
+                            <constraint firstItem="LGc-W0-Bwg" firstAttribute="trailing" secondItem="dhV-xg-esm" secondAttribute="trailing" constant="20" id="N5g-9l-dbE"/>
+                            <constraint firstItem="dhV-xg-esm" firstAttribute="leading" secondItem="LGc-W0-Bwg" secondAttribute="leading" constant="20" id="Qpy-Bm-Iz9"/>
+                            <constraint firstItem="WhG-Pb-C2B" firstAttribute="top" secondItem="dhV-xg-esm" secondAttribute="bottom" constant="17" id="VWq-br-M1m"/>
+                            <constraint firstItem="dhV-xg-esm" firstAttribute="top" secondItem="LGc-W0-Bwg" secondAttribute="top" constant="28" id="jeZ-F8-uQY"/>
                             <constraint firstItem="LGc-W0-Bwg" firstAttribute="trailing" secondItem="WhG-Pb-C2B" secondAttribute="trailing" id="t31-q4-V6C"/>
                             <constraint firstItem="LGc-W0-Bwg" firstAttribute="bottom" secondItem="WhG-Pb-C2B" secondAttribute="bottom" id="x3n-8g-bqQ"/>
                         </constraints>
@@ -42,6 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9n0-ky-ZXa"/>
                     <connections>
+                        <outlet property="leagueTextField" destination="dhV-xg-esm" id="Bxl-i9-4G4"/>
                         <outlet property="teamsTableView" destination="WhG-Pb-C2B" id="eJD-bC-3wq"/>
                         <segue destination="Ty3-hW-gX8" kind="show" identifier="detailSegue" id="nhY-8g-vUE"/>
                     </connections>

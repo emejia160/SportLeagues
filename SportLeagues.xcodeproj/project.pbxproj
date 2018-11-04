@@ -23,7 +23,6 @@
 		9138918D218E1BFE0018D6ED /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9138918C218E1BFD0018D6ED /* TeamTableViewCell.xib */; };
 		9138918F218E4A7A0018D6ED /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138918E218E4A7A0018D6ED /* TeamTableViewCell.swift */; };
 		91389192218E4C500018D6ED /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389191218E4C500018D6ED /* Team.swift */; };
-		91389194218E4C590018D6ED /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389193218E4C590018D6ED /* League.swift */; };
 		91389197218E50030018D6ED /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389196218E50030018D6ED /* BaseRepository.swift */; };
 		91389199218E50880018D6ED /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91389198218E50880018D6ED /* Alamofire.framework */; };
 		9138919B218E50880018D6ED /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9138919A218E50880018D6ED /* AlamofireImage.framework */; };
@@ -81,7 +80,6 @@
 		9138918C218E1BFD0018D6ED /* TeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamTableViewCell.xib; sourceTree = "<group>"; };
 		9138918E218E4A7A0018D6ED /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		91389191218E4C500018D6ED /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		91389193218E4C590018D6ED /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		91389196218E50030018D6ED /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		91389198218E50880018D6ED /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9138919A218E50880018D6ED /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,7 +174,6 @@
 				91389190218E4C450018D6ED /* Models */,
 				9138918A218E17FF0018D6ED /* Splash */,
 				9138917D218E14E40018D6ED /* Teams */,
-				9138917C218E14DB0018D6ED /* Leagues */,
 				91389176218E07CF0018D6ED /* Resources */,
 				91389145218DFB140018D6ED /* AppDelegate.swift */,
 				91389149218DFB140018D6ED /* Main.storyboard */,
@@ -216,16 +213,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9138917C218E14DB0018D6ED /* Leagues */ = {
-			isa = PBXGroup;
-			children = (
-				91389183218E151B0018D6ED /* Views */,
-				91389182218E15160018D6ED /* Presenter */,
-				91389181218E150F0018D6ED /* Repository */,
-			);
-			path = Leagues;
-			sourceTree = "<group>";
-		};
 		9138917D218E14E40018D6ED /* Teams */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,27 +250,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		91389181218E150F0018D6ED /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		91389182218E15160018D6ED /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		91389183218E151B0018D6ED /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		9138918A218E17FF0018D6ED /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				91389191218E4C500018D6ED /* Team.swift */,
-				91389193218E4C590018D6ED /* League.swift */,
 				9138919F218E51A70018D6ED /* DataError.swift */,
 				916669CD218E85F700FF64CE /* TeamEvent.swift */,
 			);
@@ -581,7 +546,6 @@
 				913891A7218E55A30018D6ED /* LoadingView.swift in Sources */,
 				913891AB218E58EC0018D6ED /* UIColorExtension.swift in Sources */,
 				91389192218E4C500018D6ED /* Team.swift in Sources */,
-				91389194218E4C590018D6ED /* League.swift in Sources */,
 				917C3FD4218E6C850092EED2 /* TeamDetailViewController.swift in Sources */,
 				913891A0218E51A70018D6ED /* DataError.swift in Sources */,
 				91389175218E06140018D6ED /* Constants.swift in Sources */,

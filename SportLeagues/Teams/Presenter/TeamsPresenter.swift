@@ -34,8 +34,8 @@ class TeamsPresenter {
         self.repository = TeamsRepository()
     }
     
-    func loadTeams() {
-        self.repository.loadTeams(responseHandler: teamsResponseHandler)
+    func loadTeams(leagueId: String) {
+        self.repository.loadTeams(leagueId: leagueId, responseHandler: teamsResponseHandler)
     }
     
     func loadTeamEvents(teamId: String) {

@@ -80,11 +80,11 @@ class TeamDetailViewController: BaseViewController {
         if let urlString = team?.jersey, let url = URL(string: urlString) {
             self.teamJersey.af_setImage(withURL: url)
         }
-        btnWeb.alpha = team?.webSite == "" ? 0.5 :  1
-        btnFacebook.alpha = team?.facebookLink == "" ? 0.5 :  1
-        btnTwitter.alpha = team?.twitterLink == "" ? 0.5 :  1
-        btnInstagram.alpha = team?.instagramLink == "" ? 0.5 :  1
-        btnYoutube.alpha = team?.youtubeLink == "" ? 0.5 :  1
+        btnWeb.alpha = team?.webSite != "" ? 1 :  0.5
+        btnFacebook.alpha = team?.facebookLink != "" ? 1 :  0.5
+        btnTwitter.alpha = team?.twitterLink != "" ? 1 :  0.5
+        btnInstagram.alpha = team?.instagramLink != "" ? 1 :  0.5
+        btnYoutube.alpha = team?.youtubeLink != "" ? 1 :  0.5
         
     }
     

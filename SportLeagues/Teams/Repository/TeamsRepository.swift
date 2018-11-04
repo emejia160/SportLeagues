@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 final class TeamsRepository: BaseRepository {
-    func loadTeams<T>(responseHandler: @escaping ((_ result: Result<T>) -> Void)) where T: Decodable {
-        let url =  String(format: Constants.Request.listTeamsPerLeaguePath, "4335")
+    func loadTeams<T>(leagueId: String, responseHandler: @escaping ((_ result: Result<T>) -> Void)) where T: Decodable {
+        let url =  String(format: Constants.Request.listTeamsPerLeaguePath, leagueId)
         
         let headers: HTTPHeaders = [
             "X-Api-Key": "1",
