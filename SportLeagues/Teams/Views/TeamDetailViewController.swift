@@ -24,11 +24,15 @@ class TeamDetailViewController: BaseViewController {
     @IBOutlet weak var teamJersey: UIImageView!
     @IBOutlet weak var teamBadge: UIImageView!
     var team : Team?
+    var presenter: TeamsPresenter?
+    var teamEvents: [TeamEvent] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = TeamsPresenter(delegate: self)
         configureCollectionView()
         setupUI()
+        presenter?.loadTeamEvents(teamId: (team?.teamId)!)
     }
     
     @IBAction func btnWebPagePressed(_ sender: Any) {
@@ -89,14 +93,21 @@ class TeamDetailViewController: BaseViewController {
 extension TeamDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.teamEvents.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cells.TeamEventCollectionViewCell.identifier, for: indexPath) as! TeamEventCollectionViewCell
-      
+      cell.setUpData(teamEvent: self.teamEvents[indexPath.row])
         
         return cell
+    }
+}
+
+extension TeamDetailViewController: TeamDetailView {
+    func showTeamEvents(teamEvents: [TeamEvent]) {
+        self.teamEvents = teamEvents
+        self.teamEventsCollectionView.reloadData()
     }
 }

@@ -10,31 +10,13 @@ import Foundation
 
 class TeamEvent: Codable {
     
-    var name: String?
-    var stadium: String?
-    var badge: String?
-    var descriptionEN: String?
-    var descriptionES: String?
-    var formedYear: String?
-    var jersey: String?
-    var webSite: String?
-    var facebookLink: String?
-    var twitterLink: String?
-    var instagramLink: String?
-    var youtubeLink: String?
+    var event: String?
+    var league: String?
+    var date: String?
     
     private enum CodingKeys: String, CodingKey {
-        case name = "strTeam"
-        case stadium = "strStadium"
-        case badge = "strTeamBadge"
-        case descriptionEN = "strDescriptionEN"
-        case descriptionES = "strDescriptionES"
-        case formedYear = "intFormedYear"
-        case jersey = "strTeamJersey"
-        case webSite = "strWebsite"
-        case facebookLink = "strFacebook"
-        case twitterLink = "strTwitter"
-        case instagramLink = "strInstagram"
-        case youtubeLink = "strYoutube"
+        case event = "strEvent"
+        case league = "strLeague"
+        case date = "dateEvent"
     }
 }

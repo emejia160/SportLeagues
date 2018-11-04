@@ -18,4 +18,13 @@ final class TeamsRepository: BaseRepository {
         ]
         BaseRepository.callService(url: url, method: .get, parameters: [:], encoding: URLEncoding.httpBody, headers: headers, responseHandler: responseHandler)
     }
+    
+    func loadTeamEvents<T>(teamId: String, responseHandler: @escaping ((_ result: Result<T>) -> Void)) where T: Decodable {
+        let url =  String(format: Constants.Request.teamEventPath, teamId)
+        
+        let headers: HTTPHeaders = [
+            "X-Api-Key": "1",
+            ]
+        BaseRepository.callService(url: url, method: .get, parameters: [:], encoding: URLEncoding.httpBody, headers: headers, responseHandler: responseHandler)
+    }
 }

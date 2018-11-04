@@ -34,13 +34,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watford vs Liverpool" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z94-hr-D3M" userLabel="Event ">
-                        <rect key="frame" x="20" y="54.5" width="243" height="22.5"/>
-                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="19"/>
+                        <rect key="frame" x="20" y="54.5" width="243" height="19"/>
+                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
                         <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English premier league" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zh5-5P-VgF" userLabel="Event League">
-                        <rect key="frame" x="20" y="95" width="243" height="14"/>
+                        <rect key="frame" x="20" y="91.5" width="243" height="14"/>
                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -72,6 +72,11 @@
                     <color key="value" red="0.61278623286598988" green="0.61278623286598988" blue="0.61278623286598988" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="eventDate" destination="fRH-1U-J2j" id="bXa-M4-7fB"/>
+                <outlet property="eventLeague" destination="zh5-5P-VgF" id="0Qw-hP-ife"/>
+                <outlet property="eventTeams" destination="Z94-hr-D3M" id="8iV-FM-LWO"/>
+            </connections>
             <point key="canvasLocation" x="-321.5" y="-71.5"/>
         </collectionViewCell>
     </objects>

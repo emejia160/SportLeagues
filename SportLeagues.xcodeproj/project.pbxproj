@@ -255,10 +255,10 @@
 		91389180218E150B0018D6ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9138918B218E18B40018D6ED /* Cells */,
-				91389147218DFB140018D6ED /* TeamsViewController.swift */,
 				917C3FD3218E6C850092EED2 /* TeamDetailViewController.swift */,
+				91389147218DFB140018D6ED /* TeamsViewController.swift */,
 				91389186218E17D10018D6ED /* Teams.storyboard */,
+				9138918B218E18B40018D6ED /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,9 +295,9 @@
 			isa = PBXGroup;
 			children = (
 				916669C9218E858E00FF64CE /* TeamEventCollectionViewCell.xib */,
+				916669CB218E85B500FF64CE /* TeamEventCollectionViewCell.swift */,
 				9138918C218E1BFD0018D6ED /* TeamTableViewCell.xib */,
 				9138918E218E4A7A0018D6ED /* TeamTableViewCell.swift */,
-				916669CB218E85B500FF64CE /* TeamEventCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

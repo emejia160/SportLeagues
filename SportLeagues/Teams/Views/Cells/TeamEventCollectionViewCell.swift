@@ -10,12 +10,17 @@ import Foundation
 import UIKit
 
 class TeamEventCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var eventLeague: UILabel!
+    @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var eventTeams: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func setUpData(team: Team){
-        
+    func setUpData(teamEvent: TeamEvent){
+        self.eventLeague.text = teamEvent.league
+        self.eventDate.text = teamEvent.date
+        self.eventTeams.text = teamEvent.event
     }
 }

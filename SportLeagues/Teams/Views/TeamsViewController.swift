@@ -40,7 +40,8 @@ class TeamsViewController: BaseViewController {
 
 extension TeamsViewController: TeamsView{
     func showError(error: String) {
-        
+          self.progress?.hide(animated: true)
+        showAlert(title: "Ups!", message: error)
     }
     
     func showTeams(teams: [Team]) {

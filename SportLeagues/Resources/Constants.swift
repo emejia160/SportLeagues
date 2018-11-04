@@ -20,6 +20,7 @@ struct Constants {
         
         static let listTeamsPerLeaguePath = baseUrl + "/lookup_all_teams.php?id=%@"
         static let listAllLeaguesPath = baseUrl + "/all_leagues.php"
+        static let teamEventPath = baseUrl + "/eventsnext.php?id=%@"
         
     }
     

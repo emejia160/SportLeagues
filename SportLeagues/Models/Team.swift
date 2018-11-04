@@ -22,6 +22,7 @@ class Team: Codable {
     var twitterLink: String?
     var instagramLink: String?
     var youtubeLink: String?
+    var teamId: String?
     
     private enum CodingKeys: String, CodingKey {
         case name = "strTeam"
@@ -36,6 +37,7 @@ class Team: Codable {
         case twitterLink = "strTwitter"
         case instagramLink = "strInstagram"
         case youtubeLink = "strYoutube"
+        case teamId = "idTeam"
     }
 }
 

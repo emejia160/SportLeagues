@@ -13,9 +13,15 @@ protocol TeamsView {
     func showError(error: String)
 }
 
+protocol TeamDetailView {
+    func showTeamEvents(teamEvents: [TeamEvent])
+}
+
 class TeamsPresenter {
     
     var teamsDelegate: TeamsView?
+    var teamDetailDelegate: TeamDetailView?
+    
     private var repository: TeamsRepository
     
     init(delegate: TeamsView?) {
@@ -23,10 +29,18 @@ class TeamsPresenter {
         self.repository = TeamsRepository()
     }
     
+    init(delegate: TeamDetailView?) {
+        self.teamDetailDelegate = delegate
+        self.repository = TeamsRepository()
+    }
+    
     func loadTeams() {
         self.repository.loadTeams(responseHandler: teamsResponseHandler)
     }
     
+    func loadTeamEvents(teamId: String) {
+        self.repository.loadTeamEvents(teamId: teamId, responseHandler: teamEventsResponseHandler)
+    }
 }
 
 extension TeamsPresenter {
@@ -36,6 +50,15 @@ extension TeamsPresenter {
             self.teamsDelegate?.showTeams(teams: teams)
         case .Failure(let error):
             self.teamsDelegate?.showError(error: error.userInfo["message"] as! String)
+        }
+    }
+    
+    func teamEventsResponseHandler(result: Result<[TeamEvent]>) {
+        switch result {
+        case .Success(let teamEvents):
+            self.teamDetailDelegate?.showTeamEvents(teamEvents: teamEvents)
+        case .Failure( _):
+            break
         }
     }
 }
