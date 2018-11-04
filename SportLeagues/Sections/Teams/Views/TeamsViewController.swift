@@ -32,7 +32,7 @@ class TeamsViewController: BaseViewController {
         self.presenter = TeamsPresenter(delegate: self)
       
         
-        loadTeams(leagueId: leaguesArray[2].leagueId)
+        loadTeams(leagueId: leaguesArray[0].leagueId)
         
     }
     
@@ -53,6 +53,7 @@ class TeamsViewController: BaseViewController {
         self.leaguesPickerView.dataSource = self
         self.leagueTextField.inputView = self.leaguesPickerView
          leagueTextField.inputAccessoryView = toolBar
+         self.leagueTextField.text = leaguesArray[0].leagueName
     }
     
     @objc private func donePicker() {
@@ -61,6 +62,7 @@ class TeamsViewController: BaseViewController {
     }
     
     private func loadTeams(leagueId: String) {
+       
          showProgress(message: NSLocalizedString("message.loadingteams", comment: ""), style: .light, presentationContext: .overCurrentContext)
         self.presenter?.loadTeams(leagueId: leagueId)
     }

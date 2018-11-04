@@ -10,6 +10,7 @@
 		22539A5B9C8C50017693CE08 /* Pods_SportLeagues.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F008D91982E8EAADA416142A /* Pods_SportLeagues.framework */; };
 		4D3A052D289CFEF896AEBC56 /* Pods_SportLeaguesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B35F358412646D8DAE2865 /* Pods_SportLeaguesTests.framework */; };
 		581DEA7F114186A1521D8B1C /* Pods_SportLeaguesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10ED352953FA48BE663EFC1 /* Pods_SportLeaguesUITests.framework */; };
+		91359215218EBBD900623D7C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91359214218EBBD900623D7C /* SplashViewController.swift */; };
 		91389146218DFB140018D6ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389145218DFB140018D6ED /* AppDelegate.swift */; };
 		91389148218DFB140018D6ED /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91389147218DFB140018D6ED /* TeamsViewController.swift */; };
 		9138914B218DFB140018D6ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91389149218DFB140018D6ED /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		168EB40831A67F1B220FAEF1 /* Pods-SportLeaguesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportLeaguesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportLeaguesTests/Pods-SportLeaguesTests.release.xcconfig"; sourceTree = "<group>"; };
 		1FCD468DD54A07EF5054DC4D /* Pods-SportLeagues.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportLeagues.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SportLeagues/Pods-SportLeagues.debug.xcconfig"; sourceTree = "<group>"; };
 		690868208043B0424DC54EFF /* Pods-SportLeaguesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportLeaguesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SportLeaguesUITests/Pods-SportLeaguesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		91359214218EBBD900623D7C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		91389142218DFB140018D6ED /* SportLeagues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportLeagues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91389145218DFB140018D6ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91389147218DFB140018D6ED /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		91359216218EBE9600623D7C /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				9138918A218E17FF0018D6ED /* Splash */,
+				9138917D218E14E40018D6ED /* Teams */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
 		91389139218DFB140018D6ED = {
 			isa = PBXGroup;
 			children = (
@@ -172,11 +183,9 @@
 			children = (
 				91389195218E4FF40018D6ED /* Base */,
 				91389190218E4C450018D6ED /* Models */,
-				9138918A218E17FF0018D6ED /* Splash */,
-				9138917D218E14E40018D6ED /* Teams */,
+				91359216218EBE9600623D7C /* Sections */,
 				91389176218E07CF0018D6ED /* Resources */,
 				91389145218DFB140018D6ED /* AppDelegate.swift */,
-				91389149218DFB140018D6ED /* Main.storyboard */,
 				9138914E218DFB170018D6ED /* LaunchScreen.storyboard */,
 				91389151218DFB170018D6ED /* Info.plist */,
 			);
@@ -253,6 +262,8 @@
 		9138918A218E17FF0018D6ED /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				91359214218EBBD900623D7C /* SplashViewController.swift */,
+				91389149218DFB140018D6ED /* Main.storyboard */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -538,6 +549,7 @@
 				9138918F218E4A7A0018D6ED /* TeamTableViewCell.swift in Sources */,
 				916669CE218E85F700FF64CE /* TeamEvent.swift in Sources */,
 				91389197218E50030018D6ED /* BaseRepository.swift in Sources */,
+				91359215218EBBD900623D7C /* SplashViewController.swift in Sources */,
 				913891AD218E5F7D0018D6ED /* TeamsRepository.swift in Sources */,
 				913891A4218E52D70018D6ED /* BaseViewController.swift in Sources */,
 				916669CC218E85B500FF64CE /* TeamEventCollectionViewCell.swift in Sources */,
